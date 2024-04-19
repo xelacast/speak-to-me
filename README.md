@@ -46,7 +46,7 @@ You must insert your environment variables NOW. The only REQUIRED variable is th
 
 (Optional) The app is using Langchain with Langsmith and Langserve so <b>you can create a langsmith account and api key if you want tracing</b>
 
-Once you have the OpenAI API key run the following
+Once you have the OpenAI API key placed into your .env run the following
 ```bash
 python3 main.py
 ```
