@@ -1,0 +1,22 @@
+"""
+parse the text and find a color and lock type if present
+
+Example: Incoming text is "I want a blue pair of jeans and a lock thats opened". Lock type is 'open' color is 'blue'.
+Example: I want a shut lock that is #8a251e. lock_type is 'closed' color is '#8a251e'.
+
+- If no color is found then the value will be "black".
+- If there is MORE than one color found only use the first color.
+- Convert the color to hex format before sending it to the Custom Tool.
+- Send only the first value of the color(s) to the Custom Tool.
+
+- THE ONLY values the lock_type can be are: 'open', 'closed', 'none', 'half-opened'. DO NOT RETURN ANY OTHER VALUES.
+- If NO lock type is found then the value will be "open".
+- If there is MORE than one lock type found only use the first lock type.
+
+- Do not decide the value of the lock until you have read all instructions and the text.
+- FORMAT THE COLORS TO HEX FORMAT
+
+TAKE YOUR TIME TO THINK
+
+{input}
+"""

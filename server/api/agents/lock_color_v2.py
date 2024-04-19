@@ -14,7 +14,7 @@ llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
 # ==== Custom Function for appending messages to chat history === #
 
-def inovoke_and_append(input: str, chat_history: list):
+def invoke_and_append(input: str, chat_history: list):
     result = agent_executor.invoke({"input": input, "chat_history": chat_history})
     chat_history.extend(
         [

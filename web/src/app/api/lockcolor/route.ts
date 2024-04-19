@@ -1,5 +1,8 @@
 // https://developer.mozilla.org/docs/Web/API/ReadableStream#convert_async_iterator_to_stream
 
+// Attempt at streaming back to the server
+// This file should be ignored for now
+
 export async function POST(request: Request) {
   console.log("inside lockcolor route again");
   try {

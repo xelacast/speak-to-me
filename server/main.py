@@ -9,7 +9,7 @@ import uvicorn
 from dotenv import load_dotenv, find_dotenv
 from langchain.schema.runnable import RunnableLambda
 
-from api.chat import ChatHistory, chat_model, chat_message_bot, ChatHistoryMessage, FileProcessingRequest, process_file
+# from api.chat import ChatHistory, chat_model, chat_message_bot, ChatHistoryMessage, FileProcessingRequest, procFBess_file
 
 from langchain.tools import StructuredTool, tool
 from langchain_openai import ChatOpenAI
@@ -20,6 +20,9 @@ import json
 from langchain.chains.structured_output.base import create_structured_output_runnable
 import requests
 from langchain.tools.render import render_text_description_and_args, render_text_description
+
+from api.agents.lock_color_v2 import agent
+from api.agents.chat_with_history import chat_chain_with_history
 
 
 
@@ -171,6 +174,19 @@ add_routes(
     app,
     json_chain,
     path="/lockcolor"
+)
+
+# Chat with chat history
+add_routes(
+    app,
+    agent,
+    path="/lockcolor-v2"
+)
+
+add_routes(
+    app,
+    chat_chain_with_history,
+    path="/chatbot"
 )
 
 if __name__ == "__main__":

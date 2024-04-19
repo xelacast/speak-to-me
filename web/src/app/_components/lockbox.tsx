@@ -15,6 +15,7 @@ interface Lock {
 
 export default function LockBox({ lock_type, color }: Lock) {
   // receive state of lockbox based on input of llm
+  console.log("lock", lock_type);
   let lock: React.ReactNode;
   if (lock_type === "open") {
     lock = <LockOpen2Icon height={50} width={50} color={color} />;
