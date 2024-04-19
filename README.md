@@ -1,6 +1,6 @@
 # SpeakToMe
 
-# Description
+## Description
 
 Chat with the lovely chat to change the state and color of the lock.
 
@@ -11,10 +11,10 @@ Chat with the lovely chat to change the state and color of the lock.
 - [ ] Voice to chat interactions.
 - [ ] Integrate chat model into application functionality (chat to action)
 
-# Motivation
+## Motivation
 I was bored and wanted to add a cool feature to the other application I am currently working on. Theres a few things I wanted to try and build here before I did that. I also wanted to learn Langchain and ChatGPT more in depth to potentially change my career.
 
-# Quick Start
+## Quick Start
 
 Clone the repository
 ```bash
@@ -27,7 +27,7 @@ Requirements:
 - docker
 - python3.11+
 
-## Client
+### Client
 Follow the bash commands below to run the projects
 
 ```bash
@@ -36,7 +36,7 @@ cd web && cp .env.example .env && pnpm i && pnpm dev --turbo
 
 Then travel to http://localhost:3000
 
-## Server
+### Server
 Open a new bash terminal to run the commands in
 
 ```bash
@@ -56,13 +56,13 @@ This will run the server on http://localhost:8000
 
 Endpoints can be seen at http://localhost:8000/docs
 
-# ⚙️ Usage
+## ⚙️ Usage
 
 Travel to http://localhost:3000 after setup and talk to the chatbot. Right now it can only take in commands to change its color and to change the lock to a state of 'opened' 'closed' 'half-opened'. The GPT will inference the color and state based off the text input. If it doesn't find a color or state it will default to 'closed' and 'black'.
 
 
 Travel to http://localhost:8000/lockcolor/playground to interact with the endpoint
 
-# 🤝 Contributing
+## 🤝 Contributing
 
 Feel free to contribute
