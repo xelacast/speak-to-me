@@ -18,7 +18,7 @@ I was bored and wanted to add a cool feature to the other application I am curre
 
 Clone the repository
 ```bash
-git clone <insert ssh here>
+git clone git@github.com:xelacast/speak-to-me.git
 ```
 
 Requirements:
