@@ -7,7 +7,6 @@ from langchain_openai import ChatOpenAI
 from langserve import add_routes
 import uvicorn
 from dotenv import load_dotenv, find_dotenv
-from langchain.schema.runnable import RunnableLambda
 
 # from api.chat import ChatHistory, chat_model, chat_message_bot, ChatHistoryMessage, FileProcessingRequest, procFBess_file
 
@@ -19,13 +18,9 @@ from langchain_core.output_parsers import JsonOutputParser
 import json
 from langchain.chains.structured_output.base import create_structured_output_runnable
 import requests
-from langchain.tools.render import render_text_description_and_args, render_text_description
 
 from api.agents.lock_color_v2 import agent
 from api.agents.chat_with_history import chat_chain_with_history
-
-
-
 
 load_dotenv(find_dotenv())
 

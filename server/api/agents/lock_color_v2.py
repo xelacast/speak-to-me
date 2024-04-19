@@ -9,6 +9,9 @@ from langchain_openai import ChatOpenAI
 from langchain.agents import tool
 from langchain.agents import AgentExecutor
 
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+
 
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
