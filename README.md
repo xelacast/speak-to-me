@@ -28,7 +28,7 @@ Requirements:
 - python3.11+
 
 ## Client
-Follow the commands below to run the projects
+Follow the bash commands below to run the projects
 
 ```bash
 cd web && cp .env.example .env && pnpm i && pnpm dev --turbo
@@ -37,8 +37,7 @@ cd web && cp .env.example .env && pnpm i && pnpm dev --turbo
 Then travel to http://localhost:3000
 
 ## Server
-
-NOTE: Open a new terminal to run the commands in
+Open a new bash terminal to run the commands in
 
 ```bash
 cd server && cp .env.example .env && python3 -m venv .venv && source ./.venv/bin/activate && pip install -r requirements.txt
