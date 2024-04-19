@@ -28,24 +28,20 @@ Requirements:
 - python3.11+
 
 ## Client
-NOTE: The client side is using pnpm package manager
-Run the bash client script for a quick setup. <em>This will install pnpm globally using npm</em>
+Follow the commands below to run the projects
 
 ```bash
-start-client.sh
-```
-
-OR do it manually
-```bash
-cd web && cp .env.example .env && pnpm i && start-database.sh && pnpm dev --turbo
+cd web && cp .env.example .env && pnpm i && pnpm dev --turbo
 ```
 
 Then travel to http://localhost:3000
 
 ## Server
 
+NOTE: Open a new terminal to run the commands in
+
 ```bash
-cd server && cp .env.example .env && python3 -m venv .venv && python3 install -r requirements
+cd server && cp .env.example .env && python3 -m venv .venv && source ./.venv/bin/activate && pip install -r requirements.txt
 ```
 You must insert your environment variables NOW. The only REQUIRED variable is the OPENAI_API_KEY. The app is running off of ChatGPT so you must use an OpenAI api key.
 
@@ -64,6 +60,9 @@ Endpoints can be seen at http://localhost:8000/docs
 # ⚙️ Usage
 
 Travel to http://localhost:3000 after setup and talk to the chatbot. Right now it can only take in commands to change its color and to change the lock to a state of 'opened' 'closed' 'half-opened'. The GPT will inference the color and state based off the text input. If it doesn't find a color or state it will default to 'closed' and 'black'.
+
+
+Travel to http://localhost:8000/lockcolor/playground to interact with the endpoint
 
 # 🤝 Contributing
 
